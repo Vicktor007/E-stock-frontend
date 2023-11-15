@@ -27,7 +27,7 @@ const ProductList = ({ products, isLoading }) => {
   const dispatch = useDispatch();
 
   const shortenText = (text, n) => {
-    if (text.length > n) {
+    if (text && text.length > n) {
       const shortenedText = text.substring(0, n).concat("...");
       return shortenedText;
     }
@@ -122,7 +122,8 @@ const ProductList = ({ products, isLoading }) => {
                     
                     <tr key={_id}>
                        <td>{index + 1}</td>
-                       <td>{name ? shortenText(name, 16) : ''}</td>
+                      <td>{shortenText(name, 16)}</td>
+                      {/* <td>{name ? shortenText(name, 16) : ''}</td> */}
                       <td>{category}</td>
                       <td>
                         {"$"}
