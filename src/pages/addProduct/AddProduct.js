@@ -13,6 +13,7 @@ const initialState = {
   category: "",
   quantity: "",
   price: "",
+  description: ""
 };
 
 const AddProduct = () => {

@@ -7,7 +7,7 @@ import { getProduct } from "../../../redux/features/product/productSlice";
 import Card from "../../card/Card";
 import Loader from "../../loader/Loader";
 import "./ProductDetail.scss";
-import DOMPurify from "dompurify";
+// import DOMPurify from "dompurify";
 
 
 const ProductDetail = () => {
@@ -78,11 +78,12 @@ const ProductDetail = () => {
               {product.price * product.quantity}
             </p>
             <hr />
-            <div
-              dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(product.description),
-              }}
-            ></div>
+            <p>{product.description}</p>
+            {/* <div
+              // dangerouslySetInnerHTML={{
+              //   __html: DOMPurify.sanitize(product.description),
+              // }}
+            >{product.description}</div> */}
             <hr />
             <code className="--color-dark">
               Created on: {product.createdAt.toLocaleString("en-US")}

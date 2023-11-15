@@ -73,14 +73,23 @@ const ProductForm = ({
             value={product?.quantity}
             onChange={handleInputChange}
           />
-          <label>Product Quantity:</label>
+          <label>Product Description:</label>
+            <textarea
+              cols="30"
+              rows="10"
+              name="description"
+              placeholder="Product Description"
+              value={product?.description}
+              onChange={handleInputChange}
+            ></textarea>
+          {/* <label>Product Description:</label>
           <input
             type="text"
             placeholder="Product Description"
             name="description"
             value={product?.description}
             onChange={handleInputChange}
-          />
+          /> */}
 
           {/* <label>Product Description:</label>
           <ReactQuill
