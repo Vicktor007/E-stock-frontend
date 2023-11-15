@@ -122,7 +122,7 @@ const ProductList = ({ products, isLoading }) => {
                     
                     <tr key={_id}>
                        <td>{index + 1}</td>
-                      <td>{shortenText(name, 16)}</td>
+                       <td>{name ? shortenText(name, 16) : ''}</td>
                       <td>{category}</td>
                       <td>
                         {"$"}
