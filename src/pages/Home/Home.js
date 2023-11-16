@@ -31,16 +31,16 @@ const Home = () => {
           </ShowOnLogout>
           <ShowOnLogout>
             <li>
-              <button className="--btn --btn-primary">
-                <Link to="/login">Login</Link>
-              </button>
+              
+                <Link to="/login"className="--btn --btn-primary">Login</Link>
+              
             </li>
           </ShowOnLogout>
           <ShowOnLogin>
             <li>
-              <button className="--btn --btn-primary">
-                <Link to="/dashboard">Dashboard</Link>
-              </button>
+              
+                <Link to="/dashboard" className="--btn --btn-primary">Dashboard</Link>
+              
             </li>
           </ShowOnLogin>
         </ul>
@@ -54,9 +54,9 @@ const Home = () => {
             real timeand integrated to make it easier to develop your business.
           </p>
           <div className="hero-buttons">
-            <button className="--btn --btn-secondary">
-              <Link to="/dashboard">Free Trial 1 Month</Link>
-            </button>
+            
+              <Link to="/dashboard" className="--btn --btn-secondary">Free Trial 1 Month</Link>
+           
           </div>
           <div className="--flex-start">
             <NumberText num="14K" text="Brand Owners" />
