@@ -74,13 +74,13 @@ const EditProfile = () => {
         };
 
          await updateUser(formData);
-        // console.log(data);
+       
         toast.success("User updated");
         navigate("/profile");
         setIsLoading(false);
       }
     } catch (error) {
-      // console.log(error);
+      
       setIsLoading(false);
       toast.error(error.message);
     }

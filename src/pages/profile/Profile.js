@@ -21,7 +21,7 @@ const Profile = () => {
 
 
   const deleteUser = async (id) => {
-    // console.log(id);
+    
     await deleteUserAccount(id);
     toast.success("User Account Deleted successfully");
     await navigate("/")
@@ -38,7 +38,7 @@ const Profile = () => {
         },
         {
           label: "Cancel",
-          // onClick: () => alert('Click No')
+          
         },
       ],
     });
@@ -46,11 +46,11 @@ const Profile = () => {
 
 
   useEffect(() => {
-    // console.log("Getting user");
+   
     setIsLoading(true);
     async function getUserData() {
       const data = await getUser();
-      // console.log(data);
+      
 
       setProfile(data);
       setIsLoading(false);

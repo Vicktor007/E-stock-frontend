@@ -22,7 +22,7 @@ const EditProduct = () => {
   const [product, setProduct] = useState(productEdit);
   const [productImage, setProductImage] = useState("");
   const [imagePreview, setImagePreview] = useState(null);
-  // const [description, setDescription] = useState("");
+ 
 
   useEffect(() => {
     dispatch(getProduct(id));
@@ -35,9 +35,7 @@ const EditProduct = () => {
       productEdit && productEdit.image ? `${productEdit.image.filePath}` : null
     );
 
-    // setDescription(
-    //   productEdit && productEdit.description ? productEdit.description : ""
-    // );
+   
   }, [productEdit]);
 
   const handleInputChange = (e) => {
@@ -78,8 +76,6 @@ const EditProduct = () => {
         product={product}
         productImage={productImage}
         imagePreview={imagePreview}
-        // description={description}
-        // setDescription={setDescription}
         handleInputChange={handleInputChange}
         handleImageChange={handleImageChange}
         saveProduct={saveProduct}
