@@ -499,3 +499,7 @@ a:hover {
   background-color: var(--light-blue);
   height: 100%;
 }
+
+#loom-companion-mv3 {
+  display: none;
+}
