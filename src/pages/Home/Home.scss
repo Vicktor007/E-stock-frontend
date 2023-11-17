@@ -1,7 +1,12 @@
+body {
+  overflow: hidden;
+}
+
 .home {
   background-color: #030b6b;
-  min-height: 100vh;
-
+  height: 100dvh;
+ 
+  
   & nav {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
