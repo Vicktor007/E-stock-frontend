@@ -5,9 +5,9 @@ import useRedirectLoggedOutUser from "../../../customHook/useRedirectLoggedOutUs
 import { selectIsLoggedIn } from "../../../redux/features/auth/authSlice";
 import { getProduct } from "../../../redux/features/product/productSlice";
 import Card from "../../card/Card";
-import Loader from "../../loader/Loader";
+import {SpinnerImg} from "../../loader/Loader";
 import "./ProductDetail.scss";
-// import DOMPurify from "dompurify";
+
 
 
 const ProductDetail = () => {
@@ -41,8 +41,9 @@ const ProductDetail = () => {
   return (
     <div className="product-detail">
       <h3 className="--mt">Product Detail</h3>
+      {isLoading && <SpinnerImg classes="spinner" />}
       <Card cardClass="card">
-        {isLoading && <Loader />}
+        
         {product && (
           <div className="detail">
             <Card cardClass="group image-card">
@@ -79,11 +80,7 @@ const ProductDetail = () => {
             </p>
             <hr />
             <p>{product.description}</p>
-            {/* <div
-              // dangerouslySetInnerHTML={{
-              //   __html: DOMPurify.sanitize(product.description),
-              // }}
-            >{product.description}</div> */}
+            
             <hr />
             <code className="--color-dark">
               Created on: {product.createdAt.toLocaleString("en-US")}
