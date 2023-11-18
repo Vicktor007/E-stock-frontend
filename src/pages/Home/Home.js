@@ -54,9 +54,9 @@ const Home = () => {
             real timeand integrated to make it easier to develop your business.
           </p>
           <div className="hero-buttons">
-            
-              <Link to="/dashboard" className="--btn --btn-secondary">Free Trial 1 Month</Link>
-           
+          <ShowOnLogout>
+              <Link to="/register" className="--btn --btn-secondary">Free Trial 1 Month</Link>
+            </ShowOnLogout>
           </div>
           <div className="--flex-start">
             <NumberText num="14K" text="Brand Owners" />
