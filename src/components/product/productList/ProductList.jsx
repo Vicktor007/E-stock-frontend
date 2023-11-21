@@ -12,7 +12,7 @@ import {
   deleteProduct,
   getProducts,
 } from "../../../redux/features/product/productSlice";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FILTER_PRODUCTS, selectFilteredProducts } from "../../../redux/features/product/filterSlice";
 
 
@@ -123,7 +123,7 @@ const ProductList = ({ products, isLoading }) => {
                     <tr key={_id}>
                        <td>{index + 1}</td>
                       {/* <td>{shortenText(name, 16)}</td> */}
-                      <td>{name ? shortenText(name, 16) : ''}</td>
+                      <td><NavLink to={`/product-detail/${_id}`}>{name ? shortenText(name, 16) : ''}</NavLink></td>
                       <td>{category}</td>
                       <td>
                         {"$"}
