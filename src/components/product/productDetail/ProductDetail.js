@@ -84,11 +84,11 @@ const ProductDetail = () => {
             
             <hr />
             <code className="--color-dark">
-              Created on: {product.createdAt.toLocaleString("en-US")}
+              {/* Created on: {product.createdAt.toLocaleString("en-US")} */}
             </code>
             <br />
             <code className="--color-dark">
-              Last Updated: {product.updatedAt.toLocaleString("en-US")}
+              {/* Last Updated: {product.updatedAt.toLocaleString("en-US")} */}
             </code>
             {isLoggedIn && (<Link to={`/edit-product/${id}`} className="edit" >
             Edit
