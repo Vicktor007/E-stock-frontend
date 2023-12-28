@@ -12,7 +12,7 @@ import QRCodeGenerator from "../../qrcode/QrcodeGenerator";
 
 
 const ProductDetail = () => {
-  useRedirectLoggedOutUser("/login");
+  // useRedirectLoggedOutUser("/login");
   const dispatch = useDispatch();
 
   const { id } = useParams();
@@ -30,13 +30,13 @@ const ProductDetail = () => {
   };
 
   useEffect(() => {
-    if (isLoggedIn === true) {
+    // if (isLoggedIn === true) {
       dispatch(getProduct(id));
-    }
+    // }
 
-    if (isError) {
-      console.log(message);
-    }
+    // if (isError) {
+    //   console.log(message);
+    // }
   }, [isLoggedIn, isError, message, dispatch,id]);
 
   return (
@@ -90,9 +90,9 @@ const ProductDetail = () => {
             <code className="--color-dark">
               Last Updated: {product.updatedAt.toLocaleString("en-US")}
             </code>
-            <Link to={`/edit-product/${id}`} className="edit" >
+            {isLoggedIn && (<Link to={`/edit-product/${id}`} className="edit" >
             Edit
-            </Link>
+            </Link>)}
           </div>
           
         )}
