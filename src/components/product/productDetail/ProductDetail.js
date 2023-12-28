@@ -7,6 +7,7 @@ import { getProduct } from "../../../redux/features/product/productSlice";
 import Card from "../../card/Card";
 import {SpinnerImg} from "../../loader/Loader";
 import "./ProductDetail.scss";
+import QRCodeGenerator from "../../qrcode/QrcodeGenerator";
 
 
 
@@ -97,7 +98,7 @@ const ProductDetail = () => {
         )}
       </Card>
      
-                        
+                        <QRCodeGenerator/>
                        
                           
                         
